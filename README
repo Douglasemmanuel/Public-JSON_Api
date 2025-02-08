@@ -1,0 +1,78 @@
+**PUBLIC JSON API**
+
+**Overview**
+This is a simple API built using Django's rest_framework. The API provides a single endpoint that returns static information along with the current server date and time. It is designed to be a public JSON API, which can be used for basic purposes such as fetching contact information, GitHub links, and a specific hire page link.
+
+
+
+**Features**
+**Current DateTime**: Returns the current server date and time in the YYYY-MM-DD HH:MM:SS format.
+**Static Information**: Includes the following information:
+**Email**: Provides a contact email address.
+**GitHub Link**: Provides a URL to the GitHub repository of the project.
+**HNG Hire Page**: A link to a specific hire page for Python developers on HNG Tech.
+
+
+**ENDPOINT**
+GET /info/
+**Response**
+A successful response returns a JSON object with the following keys:
+
+**email**: The email address (example: emmanueldouglas2121@gmail.com).
+**current_datetime**: The current server date and time in YYYY-MM-DD HH:MM:SS format.
+**github_link**: A URL to the GitHub repository.
+**hng_hirepage**: A URL to the HNG hire page for Python developers.
+
+**Example Response**:
+
+{
+  "email": "emmanueldouglas2121@gmail.com",
+  "current_datetime": "2025-02-08 14:30:45",
+  "github_link": "https://github.com/Douglasemmanuel/Public-JSON_Api",
+  "hng_hirepage": "https://hng.tech/hire/python-developers"
+}
+
+**HTTP STATUS CODE**
+**200 OK**: The request was successful and the response is returned with status code 200 OK.
+**DEPENDENCIES**
+**Django**: A high-level Python web framework that enables rapid development.
+**djangorestframework**: A powerful toolkit for building Web APIs in Django.
+**datetime**: A standard Python library used for manipulating date and time objects.
+
+
+**INSTALLATION AND SETUP**
+
+1. Clone the repository:
+ git clone https://github.com/Douglasemmanuel/Public-JSON_Api.git
+
+2. Navigate to the project directory:
+  cd Public-JSON_Api
+
+3. Create a virtual environment and activate it:
+    python -m venv venv
+   source venv/bin/activate   # On Windows: venv\Scripts\activate
+
+4. Install the required dependencies:
+    pip install -r requirements.txt
+
+5. Apply database migrations:
+    python manage.py migrate
+
+6. Start the Django development server:
+    python manage.py runserver
+
+7. Access the API at http://127.0.0.1:8000/info/.
+
+
+**USAGE**
+You can send a GET request to /info/ to receive the JSON response with the current date, email, GitHub link, and HNG hire page. Example using curl:
+
+curl http://127.0.0.1:8000/info/
+
+**LICENSE**
+This project is open-source and available under the MIT License. See the LICENSE file for more details.
+
+
+
+
+
