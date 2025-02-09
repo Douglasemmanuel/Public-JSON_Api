@@ -61,13 +61,13 @@ A successful response returns a JSON object with the following keys:
 6. Start the Django development server:
     python manage.py runserver
 
-7. Access the API at http://127.0.0.1:8000/info/.
+7. Access the API at https://public-jsonapi.onrender.com/api/info/
 
 
 **USAGE**
 You can send a GET request to /info/ to receive the JSON response with the current date, email, GitHub link, and HNG hire page. Example using curl:
 
-curl http://127.0.0.1:8000/info/
+curl https://public-jsonapi.onrender.com/api/info/
 
 **LICENSE**
 This project is open-source and available under the MIT License. See the LICENSE file for more details.
